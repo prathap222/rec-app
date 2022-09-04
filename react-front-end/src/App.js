@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      message: 'Click the button to load data!'
+      message: 'Welcome to Recreation App!!'
     }
   }
 
@@ -20,7 +20,7 @@ class App extends Component {
       this.setState({
         message: response.data.message
       });
-    }) 
+    })
   }
 
   render() {
@@ -29,7 +29,7 @@ class App extends Component {
         <h1>{ this.state.message }</h1>
         <button onClick={this.fetchData} >
           Fetch Data
-        </button>        
+        </button>
       </div>
     );
   }
