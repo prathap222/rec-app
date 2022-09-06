@@ -21,6 +21,7 @@ CREATE TABLE activities (
   latitude DECIMAL(10,8) NOT NULL,
   longitude DECIMAL(11,8) NOT NULL,
   image_url TEXT,
+  activity_type VARCHAR(55) NOT NULL,
   destination_id INTEGER REFERENCES destinations(destination_id) ON DELETE CASCADE
 );
 
