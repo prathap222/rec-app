@@ -34,16 +34,19 @@ const usersRoutes = require('./routes/users');
 const tripRoutes = require("./routes/trips");
 const itineraryRoutes = require("./routes/itineraries")
 
-//
+//All Queries Factories
 const usersQueriesFactory = require("./queries/users_queries");
 const userServicesFactory = require("./services/users_services");
 const tripQueriesFactory = require("./queries/trips_queries");
-const tripsQueriesFactory = require("./services/trips_services");
+const tripsServicesFactory = require("./services/trips_services");
 const itineraryQueriesFactory = require ('./queries/itineraries_queries')
 const itineraryServicesFactory = require('./services/itineraries_services');
+const cityQueriesFactory = require('./queries/cities_queries');
+const cityServicesFactory = require('./services/cities_services');
 
 
-//
+
+//All Services
 
 const usersQueries = usersQueriesFactory(db);
 const userServices = userServicesFactory(usersQueries);
@@ -54,12 +57,16 @@ const tripServices = tripsQueriesFactory(tripsQueries);
 const itinerariesQueries = itineraryQueriesFactory(db);
 const itineraryServices = itineraryServicesFactory(itinerariesQueries);
 
+const citiesQueries = cityQueriesFactory(db);
+const cityServices = cityServicesFactory(citiesQueries);
+
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/users", usersRoutes(userServices));
 app.use("/trips", tripRoutes(tripServices));
+app.use("/itineraries", itineraryRoutes(itineraryServices));
 // Note: mount other resources here, using the same pattern above
 
 // Home page
