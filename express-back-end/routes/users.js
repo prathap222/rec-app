@@ -8,8 +8,47 @@
 const express = require('express');
 const router  = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('users');
-}); 
+module.exports = (userService) => {
+  router.get("/", async (req, res) => {
+    try {
+      console.log(req.body.data)
+      const [users] = await Promise.all([
+        await userService.getUser()
+      ]);
 
-module.exports = router;
+      res.send({users});
+    } catch (err) {
+      console.error(err);
+    }
+
+  });
+
+  router.post("/", async (req, res) => {
+    const userInput = req.body;
+    const password =userInput.password;
+    try {
+      res.clearCookie()
+      const [user] = await Promise.all ([
+        await userService.getUserByEmail(userInput)
+      ]);
+      console.log(password)
+      if(user) {
+        if (user.password === password) {
+          res.cookie('user', JSON.stringify({
+            name: user.first_name,
+            id: user.id
+          }))
+          res.send({ user })
+        } else {
+          res. cookie(null)
+          res.end()
+        }
+      } else {
+        res.end()
+      }
+    } catch(error) {
+      console.log(error)
+    }
+  })
+  return router;
+}
