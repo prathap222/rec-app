@@ -18,8 +18,8 @@ CREATE TABLE activities (
   name VARCHAR(55) NOT NULL,
   price_cents INTEGER NOT NULL,
   operation_time VARCHAR(55) NOT NULL,
-  latitude DECIMAL(10,10) NOT NULL,
-  longitude DECIMAL(11,10) NOT NULL,
+  latitude DECIMAL(10,8) NOT NULL,
+  longitude DECIMAL(11,8) NOT NULL,
   image_url TEXT,
   activity_type VARCHAR(55) NOT NULL,
   destination_id INTEGER REFERENCES destinations(id) ON DELETE CASCADE
