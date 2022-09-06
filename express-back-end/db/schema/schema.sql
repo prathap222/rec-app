@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS itineraries CASCADE;
-DROP TABLE IF EXISTS planned_activities CASCADE;
+DROP TABLE IF EXISTS schedules CASCADE;
 DROP TABLE IF EXISTS trips CASCADE;
 DROP TABLE IF EXISTS activities CASCADE;
 DROP TABLE IF EXISTS destinations CASCADE;
@@ -42,15 +42,15 @@ CREATE TABLE trips (
   total_cost INTEGER NOT NULL
 );
 
-CREATE TABLE planned_activities (
+CREATE TABLE schedules (
   id uuid PRIMARY KEY NOT NULL,
   trip_id uuid REFERENCES trips(trip_id) ON DELETE CASCADE,
 
-  activity_name VARCHAR(255) NOT NULL
+  schedule_name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE itineraries (
   id uuid PRIMARY KEY NOT NULL,
-  planned_activity_id uuid REFERENCES planned_activities(id) ON DELETE CASCADE,
+  schedule_id uuid REFERENCES schedules(id) ON DELETE CASCADE,
   activity_id INTEGER REFERENCES activities(id) ON DELETE CASCADE
 );
