@@ -9,6 +9,12 @@ const morgan = require('morgan');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+// PG database client/connection setup
+const { Pool } = require('pg');
+const dbParams = require('./db/connection.js');
+const db = new Pool(dbParams);
+db.connect();
+
 app.set('view engine', 'ejs');
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
@@ -35,15 +41,15 @@ const itineraryRoutes = require("./routes/itineraries")
 
 //All Queries Factories
 const usersQueriesFactory = require(".db/queries/users_queries");
-const userServicesFactory = require("./services/users_services");
+const userServicesFactory = require(".lib/services/users_services");
 const tripsQueriesFactory = require(".db/queries/trips_queries");
-const tripsServicesFactory = require("./services/trips_services");
+const tripsServicesFactory = require(".lib/services/trips_services");
 const itineraryQueriesFactory = require ('.db/queries/itineraries_queries')
-const itineraryServicesFactory = require('./services/itineraries_services');
+const itineraryServicesFactory = require('.lib/services/itineraries_services');
 const cityQueriesFactory = require('.db/queries/cities_queries');
-const cityServicesFactory = require('./services/cities_services');
+const cityServicesFactory = require('.lib/services/cities_services');
 const activityQueriesFactory = require(".db/queries/activities_queries");
-const activityServicesFactory = require("./services/activities_service");
+const activityServicesFactory = require(".lib/services/activities_service");
 
 
 
