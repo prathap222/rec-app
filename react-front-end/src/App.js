@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import Navigation from './Navigation';
 
 class App extends Component {
   constructor(props) {
@@ -24,13 +25,69 @@ class App extends Component {
   }
 
   render() {
+    const bStyle={
+      backgroundImage: `url(../public/images/montreal-restaurant.jpg)`,
+      // height:'100vh',
+      // marginTop:'-70px',
+      // fontSize:'50px',
+      // backgroundSize: 'cover',
+      // backgroundRepeat: 'no-repeat',
+    };
+
     return (
-      <div className="App">
-        <h1>{ this.state.message }</h1>
-        <button onClick={this.fetchData} >
+    <>
+      <main className="layout">
+
+      <Navigation />
+
+      <section className="sidebar" style={bStyle}>
+
+        {/* <img
+          className="sidebar--centered"
+          src="images/logo.png"
+          alt="Interview Scheduler"
+        /> */}
+
+
+        {/* <hr className="sidebar__separator sidebar--centered" /> */}
+
+
+        <nav className="sidebar__menu">
+        {/* <DayList
+          days={state.days}
+          value={state.day}
+          onChange={setDay}
+        /> */}
+        </nav>
+
+
+        {/* <img
+          className="sidebar__lhl sidebar--centered"
+          src="images/lhl.png"
+          alt="Lighthouse Labs"
+        /> */}
+
+
+      </section>
+
+      <section className="schedule">
+
+         {/* {!auth && <IniForm/>}
+         {auth && <Info/>} */}
+
+        {/* {schedule}
+        <Appointment key="last" time="5pm" /> */}
+
+      </section>
+
+    </main>
+    {/* <div className="App">
+      <h1>{ this.state.message }</h1>
+      <button onClick={this.fetchData} >
           Fetch Data
-        </button>
-      </div>
+      </button>
+    </div> */}
+  </>
     );
   }
 }
