@@ -28,21 +28,22 @@ app.use(express.static('public'));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const userApiRoutes = require('./routes/users-api');
-const widgetApiRoutes = require('./routes/widgets-api');
+const apiRoutes = require("./routes/api");
 const usersRoutes = require('./routes/users');
 const tripRoutes = require("./routes/trips");
 const itineraryRoutes = require("./routes/itineraries")
 
 //All Queries Factories
-const usersQueriesFactory = require("./queries/users_queries");
+const usersQueriesFactory = require(".db/queries/users_queries");
 const userServicesFactory = require("./services/users_services");
-const tripsQueriesFactory = require("./queries/trips_queries");
+const tripsQueriesFactory = require(".db/queries/trips_queries");
 const tripsServicesFactory = require("./services/trips_services");
-const itineraryQueriesFactory = require ('./queries/itineraries_queries')
+const itineraryQueriesFactory = require ('.db/queries/itineraries_queries')
 const itineraryServicesFactory = require('./services/itineraries_services');
-const cityQueriesFactory = require('./queries/cities_queries');
+const cityQueriesFactory = require('.db/queries/cities_queries');
 const cityServicesFactory = require('./services/cities_services');
+const activityQueriesFactory = require(".db/queries/activities_queries");
+const activityServicesFactory = require("./services/activities_service");
 
 
 
@@ -52,7 +53,7 @@ const usersQueries = usersQueriesFactory(db);
 const userServices = userServicesFactory(usersQueries);
 
 const tripsQueries = tripsQueriesFactory(db);
-const tripServices = tripsQueriesFactory(tripsQueries);
+const tripsServices = tripsServicesFactory(tripsQueries);
 
 const itinerariesQueries = itineraryQueriesFactory(db);
 const itineraryServices = itineraryServicesFactory(itinerariesQueries);
@@ -60,13 +61,16 @@ const itineraryServices = itineraryServicesFactory(itinerariesQueries);
 const citiesQueries = cityQueriesFactory(db);
 const cityServices = cityServicesFactory(citiesQueries);
 
+const activityQueries = activityQueriesFactory(db);
+const activityServices = activityServicesFactory(activityQueries);
+
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/users", usersRoutes(userServices));
-app.use("/api", apiRoutes(activityService,cityService));
-app.use("/trips", tripRoutes(tripServices));
+app.use("/api", apiRoutes(activityServices,cityServices));
+app.use("/trips", tripRoutes(tripsServices));
 app.use("/itineraries", itineraryRoutes(itineraryServices));
 // Note: mount other resources here, using the same pattern above
 
