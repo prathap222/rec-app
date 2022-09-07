@@ -78,3 +78,8 @@ INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, d
 ('II Terrazzo', 2500, '8:30AM-4PM', 48.42738, -123.36879, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/Il-terrazzo.png'),
 ('Johns Place Restaurant', 2500, '8:30AM-4PM', 48.4278417,-123.3637292, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/johns-place-restaurant.png'),
 ('Pagliaccis', 2500, '8:30AM-4PM', 48.4244429, -123.3664177, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/pagliaccis-restaurant.jpg');
+
+-- testdata to be deleted
+INSERT INTO trips (id, user_id, trip_name, total_cost, trip_budget) VALUES ('fe657dd5-07eb-48a7-9c3c-7381d3fef028', 1, 'test-vanc', 300, 500);
+INSERT INTO schedules (id, schedule_name, trip_id) VALUES ('12e2e066-ab47-4750-b4b0-ae7108bb54ef', 'Day 1', 'fe657dd5-07eb-48a7-9c3c-7381d3fef028');
+INSERT INTO itineraries (id, schedule_id, activity_id) VALUES ('13a8a777-3b21-43d7-bfb7-45398caf42b5', '12e2e066-ab47-4750-b4b0-ae7108bb54ef', 1);
