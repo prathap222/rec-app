@@ -34,7 +34,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE trips (
-  trip_id uuid PRIMARY KEY NOT NULL,
+  id uuid PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
 
   trip_name VARCHAR(255) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE trips (
 
 CREATE TABLE schedules (
   id uuid PRIMARY KEY NOT NULL,
-  trip_id uuid REFERENCES trips(trip_id) ON DELETE CASCADE,
+  trip_id uuid REFERENCES trips(id) ON DELETE CASCADE,
 
   schedule_name VARCHAR(255) NOT NULL
 );
