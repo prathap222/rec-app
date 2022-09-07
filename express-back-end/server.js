@@ -10,10 +10,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 // PG database client/connection setup
-const { Pool } = require('pg');
-const dbParams = require('./db/connection.js');
-const db = new Pool(dbParams);
-db.connect();
+const db = require('./db/connection');
 
 app.set('view engine', 'ejs');
 
@@ -34,24 +31,22 @@ app.use(express.static('public'));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const apiRoutes = require("./routes/api");
 const usersRoutes = require('./routes/users');
-const tripRoutes = require("./routes/trips");
+const tripRoutes = require('./routes/trips');
 const itineraryRoutes = require("./routes/itineraries")
+const apiRoutes = require('./routes/api');
 
 //All Queries Factories
-const usersQueriesFactory = require(".db/queries/users_queries");
-const userServicesFactory = require(".lib/services/users_services");
-const tripsQueriesFactory = require(".db/queries/trips_queries");
-const tripsServicesFactory = require(".lib/services/trips_services");
-const itineraryQueriesFactory = require ('.db/queries/itineraries_queries')
-const itineraryServicesFactory = require('.lib/services/itineraries_services');
-const cityQueriesFactory = require('.db/queries/cities_queries');
-const cityServicesFactory = require('.lib/services/cities_services');
-const activityQueriesFactory = require(".db/queries/activities_queries");
-const activityServicesFactory = require(".lib/services/activities_service");
-
-
+const usersQueriesFactory = require("./db/queries/users_queries");
+const userServicesFactory = require("./lib/services/user_services");
+const tripsQueriesFactory = require("./db/queries/trips_queries");
+const tripsServicesFactory = require("./lib/services/trips_services");
+const itineraryQueriesFactory = require ('./db/queries/itineraries_queries')
+const itineraryServicesFactory = require('./lib/services/itineraries_services');
+const cityQueriesFactory = require('./db/queries/cities_queries');
+const cityServicesFactory = require('./lib/services/cities_services');
+const activityQueriesFactory = require("./db/queries/activities_queries");
+const activityServicesFactory = require("./lib/services/activities_services");
 
 //All Services
 
