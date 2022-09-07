@@ -37,7 +37,7 @@ const itineraryRoutes = require("./routes/itineraries")
 //All Queries Factories
 const usersQueriesFactory = require("./queries/users_queries");
 const userServicesFactory = require("./services/users_services");
-const tripQueriesFactory = require("./queries/trips_queries");
+const tripsQueriesFactory = require("./queries/trips_queries");
 const tripsServicesFactory = require("./services/trips_services");
 const itineraryQueriesFactory = require ('./queries/itineraries_queries')
 const itineraryServicesFactory = require('./services/itineraries_services');
@@ -65,6 +65,7 @@ const cityServices = cityServicesFactory(citiesQueries);
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/users", usersRoutes(userServices));
+app.use("/api", apiRoutes(activityService,cityService));
 app.use("/trips", tripRoutes(tripServices));
 app.use("/itineraries", itineraryRoutes(itineraryServices));
 // Note: mount other resources here, using the same pattern above
@@ -77,6 +78,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get("/logout", (req, res) => {
+  res.clearCookie('user')
+  res.end()
+})
+
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Rec app listening on port ${PORT}`);
 });
