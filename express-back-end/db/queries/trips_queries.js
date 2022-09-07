@@ -33,8 +33,6 @@ module.exports = (db) => {
 
     postTrips: (tripSummary) => {
 
-      console.log('Inside the trips queries')
-
       const trip_id = Object.keys(tripSummary)[0];
       const frontEndInput = tripSummary[trip_id];
       const user_id = frontEndInput.userId

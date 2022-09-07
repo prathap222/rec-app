@@ -4,7 +4,6 @@ const router = express.Router();
 module.exports = (itineraryServices) => {
 
   router.get('/:itineraryId', (req, res) => {
-    console.log('inside route', req)
     const itineraryId = req.params.tripId
 
     itineraryServices.getItineraryId(itineraryId)

@@ -11,7 +11,6 @@ const router  = express.Router();
 module.exports = (userService) => {
   router.get("/", async (req, res) => {
     try {
-      console.log(req.body.data)
       const [users] = await Promise.all([
         await userService.getUser()
       ]);
@@ -31,7 +30,6 @@ module.exports = (userService) => {
       const [user] = await Promise.all ([
         await userService.getUserByEmail(userInput)
       ]);
-      console.log(password)
       if(user) {
         if (user.password === password) {
           res.cookie('user', JSON.stringify({
