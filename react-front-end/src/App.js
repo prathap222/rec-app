@@ -1,95 +1,56 @@
-import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import Navigation from './Navigation';
+// import axios from "axios";
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      message: 'Welcome to Recreation App!!'
-    }
-  }
-
-  fetchData = () => {
-    axios.get('/api/data') // You can simply make your requests to "/api/whatever you want"
-    .then((response) => {
-      // handle success
-      console.log(response.data) // The entire response from the Rails API
-
-      console.log(response.data.message) // Just the message
-      this.setState({
-        message: response.data.message
-      });
-    })
-  }
-
-  render() {
-    const bStyle={
-      backgroundImage: `url("../public/images/montreal-restaurant.jpg")`,
-      // height:'100vh',
-      // marginTop:'-70px',
-      // fontSize:'50px',
-      // backgroundSize: 'cover',
-      // backgroundRepeat: 'no-repeat',
-    };
-
-    return (
-    <>
-      <main className="layout">
-
-      <Navigation />
-
-      <section className="sidebar" style={bStyle}>
-
-        {/* <img
-          className="sidebar--centered"
-          src="images/logo.png"
-          alt="Interview Scheduler"
-        /> */}
+function App() {
 
 
-        {/* <hr className="sidebar__separator sidebar--centered" /> */}
+
+  return (
+    <main className="layout">
+
+    <Navigation />
+
+    <section className="sidebar" style={{backgroundImage: `url("images/montreal-restaurant.jpg")`}}>
+
+      {/* <img
+        className="sidebar--centered"
+        src="images/logo.png"
+        alt="Interview Scheduler"
+      /> */}
 
 
-        <nav className="sidebar__menu">
-        {/* <DayList
-          days={state.days}
-          value={state.day}
-          onChange={setDay}
-        /> */}
-        </nav>
+      {/* <hr className="sidebar__separator sidebar--centered" /> */}
 
 
-        {/* <img
-          className="sidebar__lhl sidebar--centered"
-          src="images/lhl.png"
-          alt="Lighthouse Labs"
-        /> */}
+      <nav className="sidebar__menu">
+      {/* <DayList
+        days={state.days}
+        value={state.day}
+        onChange={setDay}
+      /> */}
+      </nav>
 
 
-      </section>
+      {/* <img
+        className="sidebar__lhl sidebar--centered"
+        src="images/lhl.png"
+        alt="Lighthouse Labs"
+      /> */}
 
-      <section className="schedule">
 
-         {/* {!auth && <IniForm/>}
-         {auth && <Info/>} */}
+    </section>
 
-        {/* {schedule}
-        <Appointment key="last" time="5pm" /> */}
+    <section className="schedule">
 
-      </section>
 
-    </main>
-    {/* <div className="App">
-      <h1>{ this.state.message }</h1>
-      <button onClick={this.fetchData} >
-          Fetch Data
-      </button>
-    </div> */}
-  </>
-    );
-  }
+      {/* {schedule}
+      <Appointment key="last" time="5pm" /> */}
+
+    </section>
+
+  </main>
+  );
 }
 
 export default App;
