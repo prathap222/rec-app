@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     const bStyle={
-      backgroundImage: `url(../public/images/montreal-restaurant.jpg)`,
+      backgroundImage: `url("../public/images/montreal-restaurant.jpg")`,
       // height:'100vh',
       // marginTop:'-70px',
       // fontSize:'50px',
