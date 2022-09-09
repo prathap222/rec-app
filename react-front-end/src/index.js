@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import axios from 'axios';
+
+// //set the axios api's initial baseURL
+// axios.defaults.baseURL="http://localhost:8080";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

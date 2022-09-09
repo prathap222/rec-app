@@ -1,9 +1,25 @@
+import axios from "axios";
 import './App.css';
 import Navigation from './Navigation';
-// import axios from "axios";
+import TripPlan from "./components/TripPlan";
+import useApplicationData from "./hooks/useApplicationData";
+import AuthProvider from './providers/AuthProvider';
+
 
 function App() {
 
+  //objects fetched from the cumston hook useApplicationData
+  const {
+    state,
+    // setDay,
+    // bookInterview,
+    // cancelInterview
+  } = useApplicationData();
+
+
+  const tripplan = {
+    activity_id: 1
+  };
 
 
   return (
@@ -41,11 +57,13 @@ function App() {
 
     </section>
 
-    <section className="schedule">
+    <section className="tripplan">
 
-
-      {/* {schedule}
-      <Appointment key="last" time="5pm" /> */}
+      < AuthProvider>
+        <TripPlan
+          tripplan={tripplan}
+        />
+      </AuthProvider>
 
     </section>
 
@@ -54,3 +72,6 @@ function App() {
 }
 
 export default App;
+
+
+//key="last" time="5pm"
