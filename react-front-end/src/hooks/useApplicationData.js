@@ -16,19 +16,19 @@ export default function useApplicationData() {
 
   // use effect to axios request data from API
   // and receive response from API
-  // useEffect(() => {
-  //   Promise.all([
-  //     axios.get("/api/users"),
-  //     axios.get("/api/activities")
-  //   ])
-  //   .then(all => {
-  //     setState(prev => ({
-  //       ...prev,
-  //       users: all[0].data,
-  //       activities: all[1].data
-  //     }));
-  //   });
-  // }, []);
+  useEffect(() => {
+    Promise.all([
+      axios.get("/api/users"),
+      axios.get("/api/activities")
+    ])
+    .then(all => {
+      setState(prev => ({
+        ...prev,
+        users: all[0].data,
+        activities: all[1].data
+      }));
+    });
+  }, []);
 
   //keep track of correct and updated number of interview spots available
   function spotsAvailDay(newState, newAppointments) {

@@ -4,6 +4,8 @@ import Navigation from './Navigation';
 import TripPlan from "./components/TripPlan";
 import useApplicationData from "./hooks/useApplicationData";
 import AuthProvider from './providers/AuthProvider';
+// import { authContext} from './providers/AuthProvider';
+// import { useContext } from 'react';
 
 
 function App() {
@@ -17,9 +19,11 @@ function App() {
   } = useApplicationData();
 
 
-  const tripplan = {
-    activity_id: 1
-  };
+  const tripplan = false;
+
+console.log("hello, the activity is: ", tripplan.activity);
+
+  // const { user } = useContext(authContext);
 
 
   return (
@@ -45,6 +49,8 @@ function App() {
         value={state.day}
         onChange={setDay}
       /> */}
+
+        {/* {user.email} */}
       </nav>
 
 
@@ -58,12 +64,13 @@ function App() {
     </section>
 
     <section className="tripplan">
+      <AuthProvider>
 
-      < AuthProvider>
         <TripPlan
           tripplan={tripplan}
         />
       </AuthProvider>
+
 
     </section>
 
