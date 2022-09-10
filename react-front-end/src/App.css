@@ -23,11 +23,21 @@
   /* background-color: $dark-background;
   box-shadow: 0px 4px 8px rgba($dark-background, 0.5); */
   display: flex;
+
+  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-width: 18rem;
   /* padding: spacing 0; */
 
   opacity: 0.55;
+
+  font-family: "Bungee", cursive;
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.1em;
+  color: rgb(79, 228, 9);
 
   position: fixed;
   left: 0;
@@ -36,7 +46,17 @@
   height: 100%;
   background-size: cover;
 
-  &--centered {
+  &__userinfo {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-around;
+
+  }
+
+
+
+  /* &--centered {
      align-self: center;
    }
 
@@ -53,7 +73,7 @@
 
    &__lhl {
      margin-top: 2rem;
-   }
+   } */
 }
 
 .tripplan {
@@ -64,7 +84,7 @@
   align-items: center;
 
   margin: 2rem 0;
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
   margin-left: 3.5rem;
   padding-left: 1rem;
   width: 100%;
@@ -72,7 +92,7 @@
 
 
 #main-nav {
-	height: 3rem;
+	height: 2.8rem;
 	width: 100%;
 
 	background: #9eacdbc9;

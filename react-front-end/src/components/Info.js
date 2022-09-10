@@ -7,16 +7,16 @@ export default function Info(props) {
   // Show user Info
   return (
     <div>
-      <p className="UserInfo">
-        <div>Your Trip:: {user.tripTitle}</div>
-        <div>Your city: {user.city}</div>
-        <div>Your budge: {user.budge}</div>
-        <div>Number of your Day(s): {user.day}</div>
-        <div>Your Email: {user.email}</div>
+      <div className="UserInfo">
+        <p>Your Trip:: {user.tripTitle}</p>
+        <p>Your city: {user.city}</p>
+        <p>Your budge: {user.budge}</p>
+        <p>Number of your Day(s): {user.day}</p>
+        <p>Your Email: {user.email}</p>
         {/* <div>try: {props.try}</div> */}
 
 
-      </p >
+      </div >
       <p>
         <button type="button" onClick={logout}>Logout</button>
       </p>
