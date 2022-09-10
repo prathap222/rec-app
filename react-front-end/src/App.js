@@ -1,4 +1,3 @@
-import axios from "axios";
 import './App.css';
 import Navigation from './Navigation';
 import SideBar from './SideBar';
@@ -7,6 +6,7 @@ import useApplicationData from "./hooks/useApplicationData";
 import { getAdventure, getMovies, getParks, getRestaurants} from './helpers/choices'
 
 import PageSwProvider from './providers/PageSwProvider';
+import { useEffect, useState } from "react";
 
 
 function App() {
@@ -16,26 +16,40 @@ function App() {
     state
   } = useApplicationData();
 
-  // const user1 = state.users;
-  const act1 = state.activities;
-  // const city1 = state.cities;
+  const [adventure, setAdventure] = useState([]);
+  const [movie, setMovie] = useState([]);
+  const [restaurant, setRestaurant] = useState([]);
+  const [parks, setParks] = useState([]);
 
-console.log("act1.activities: ", act1.activities);
+useEffect(() => {
+  if (state.activities) {
 
-// console.log("array[0].activity_type: ", act1.activities[0].activity_type);
+    console.log("state.activities", state.activities);
 
-//   const adventureArr = getAdventure(act1.activities);
+    setAdventure(
+      getAdventure(state.activities)
+    )
 
-// console.log("adventureArr: ", adventureArr);
+    setMovie(
+      getMovies(state.activities)
+    )
 
-//   const movieArr = getMovies(act1.activities);
-// console.log("movieArr: ", movieArr);
+    setRestaurant(
+      getRestaurants(state.activities)
+    )
 
-//   const restaurantArr = getRestaurants(act1.activities);
-// console.log("restaurantArr: ", restaurantArr);
+    setParks(
+      getParks(state.activities)
+    )
+  }
 
-//   const parksArr = getParks(act1.activities);
-// console.log("parksArr: ", parksArr);
+}, [state]);
+
+console.log("adventure: ", adventure);
+console.log("movie: ", movie);
+console.log("restaurant: ", restaurant);
+console.log("parks: ", parks);
+
 
   return (
     <main className="layout">
@@ -58,6 +72,3 @@ console.log("act1.activities: ", act1.activities);
 }
 
 export default App;
-
-
-//key="last" time="5pm"

@@ -61,12 +61,11 @@ export default function useApplicationData() {
       axios.get("/api/cities/whistler")
     ])
     .then(all => {
-
       setState(prev => ({
         ...prev,
-        users: all[0].data,
-        activities: all[1].data,
-        cities: all[2].data
+        users: all[0].data.users,
+        activities: all[1].data.activities,
+        cities: all[2].data.cities
       }));
 
     });
