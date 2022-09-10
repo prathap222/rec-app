@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { authContext } from '../providers/AuthProvider';
-import { useContext } from 'react';
 
 export default function IniForm() {
   const [email, setEmail] = useState("");
@@ -16,34 +15,52 @@ export default function IniForm() {
     email && login(email, tripTitle, city, budge, day);
   };
 
-console.log("IniForm");
 
   return (
     <div className="login">
       <form onSubmit={onSubmit}>
+        <label htmlFor='tripTitle'>
+          Your trip is for?
+        </label>
         <p>
-          <input type="text" name="text"
+          <input type="text" id="tripTitle"
             value={tripTitle} placeholder="Enter your trip purpose"
             onChange={event => setTripTitle(event.target.value)} />
         </p>
+
+        <label htmlFor='city'>
+          City:
+        </label>
         <p>
-          <input type="text" name="text"
+          <input type="text" id="city"
             value={city} placeholder="Enter city"
             onChange={event => setCity(event.target.value)} />
         </p>
+
+        <label htmlFor='budget'>
+          Budget:
+        </label>
         <p>
-          <input type="number" name="number"
+          <input type="number" id="budget"
             value={budge} placeholder="Enter budge"
             onChange={event => setBudge(event.target.value)} />
         </p>
+
+        <label htmlFor='days'>
+          Number of days:
+        </label>
         <p>
-          <input type="number" name="number"
+          <input type="number" id="days"
             value={day} placeholder="Enter day"
             onChange={event => setDay(event.target.value)} />
         </p>
+
+        <label htmlFor='email'>
+          Email:
+        </label>
         <p>
-          <input type="text" name="username"
-            value={email} placeholder="Enter Username or email"
+          <input type="text" id="email"
+            value={email} placeholder="Enter email"
             onChange={event => setEmail(event.target.value)} />
         </p>
         {/* <p>
@@ -52,7 +69,7 @@ console.log("IniForm");
             onChange={event => setPassword(event.target.value)} />
         </p> */}
         <p className="submit">
-          <button type="submit" name="commit">Login</button>
+          <button type="submit" name="commit">Let's get started to plan!</button>
         </p>
       </form>
 

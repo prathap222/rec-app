@@ -1,80 +1,59 @@
 import axios from "axios";
 import './App.css';
 import Navigation from './Navigation';
+import SideBar from './SideBar';
 import TripPlan from "./components/TripPlan";
 import useApplicationData from "./hooks/useApplicationData";
-import AuthProvider from './providers/AuthProvider';
-// import { authContext} from './providers/AuthProvider';
-// import { useContext } from 'react';
+import { getAdventure, getMovies, getParks, getRestaurants} from './helpers/choices'
+
+import PageSwProvider from './providers/PageSwProvider';
 
 
 function App() {
 
-  //objects fetched from the cumston hook useApplicationData
+  //objects fetched from the cunston hook useApplicationData
   const {
-    state,
-    // setDay,
-    // bookInterview,
-    // cancelInterview
+    state
   } = useApplicationData();
 
+  // const user1 = state.users;
+  const act1 = state.activities;
+  // const city1 = state.cities;
 
-  const tripplan = false;
+console.log("act1.activities: ", act1.activities);
 
-console.log("hello, the activity is: ", tripplan.activity);
+// console.log("array[0].activity_type: ", act1.activities[0].activity_type);
 
-  // const { user } = useContext(authContext);
+//   const adventureArr = getAdventure(act1.activities);
 
+// console.log("adventureArr: ", adventureArr);
+
+//   const movieArr = getMovies(act1.activities);
+// console.log("movieArr: ", movieArr);
+
+//   const restaurantArr = getRestaurants(act1.activities);
+// console.log("restaurantArr: ", restaurantArr);
+
+//   const parksArr = getParks(act1.activities);
+// console.log("parksArr: ", parksArr);
 
   return (
     <main className="layout">
 
-    <Navigation />
+      <Navigation />
 
-    <section className="sidebar" style={{backgroundImage: `url("images/montreal-restaurant.jpg")`}}>
+      <SideBar />
 
-      {/* <img
-        className="sidebar--centered"
-        src="images/logo.png"
-        alt="Interview Scheduler"
-      /> */}
+      <section className="tripplan">
+        <PageSwProvider>
+          <TripPlan
+            // tripplan={adventureArr}
 
+          />
+        </PageSwProvider>
+      </section>
 
-      {/* <hr className="sidebar__separator sidebar--centered" /> */}
-
-
-      <nav className="sidebar__menu">
-      {/* <DayList
-        days={state.days}
-        value={state.day}
-        onChange={setDay}
-      /> */}
-
-        {/* {user.email} */}
-      </nav>
-
-
-      {/* <img
-        className="sidebar__lhl sidebar--centered"
-        src="images/lhl.png"
-        alt="Lighthouse Labs"
-      /> */}
-
-
-    </section>
-
-    <section className="tripplan">
-      <AuthProvider>
-
-        <TripPlan
-          tripplan={tripplan}
-        />
-      </AuthProvider>
-
-
-    </section>
-
-  </main>
+    </main>
   );
 }
 
