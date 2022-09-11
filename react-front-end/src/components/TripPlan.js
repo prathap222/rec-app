@@ -24,7 +24,13 @@ export default function TripPlan(props){
   return (
     <article className="tripplan" data-testid="tripplan">
       {!auth && <IniForm />}
-      {auth && <Info try={props.tripplan} />}
+      {auth && <Info
+        activity_type={props.activity_type}
+
+      />}
+
+
+
     </article>
   );
 }

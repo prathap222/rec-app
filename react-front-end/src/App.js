@@ -20,12 +20,10 @@ function App() {
   const [movie, setMovie] = useState([]);
   const [restaurant, setRestaurant] = useState([]);
   const [parks, setParks] = useState([]);
+  // const [activityType, setActivityType] = useState(adventure);
 
 useEffect(() => {
   if (state.activities) {
-
-    console.log("state.activities", state.activities);
-
     setAdventure(
       getAdventure(state.activities)
     )
@@ -45,11 +43,12 @@ useEffect(() => {
 
 }, [state]);
 
-console.log("adventure: ", adventure);
-console.log("movie: ", movie);
-console.log("restaurant: ", restaurant);
-console.log("parks: ", parks);
+// console.log("adventure: ", adventure);
+// console.log("movie: ", movie);
+// console.log("restaurant: ", restaurant);
+// console.log("parks: ", parks);
 
+const activity_types = [adventure, movie, restaurant, parks];
 
   return (
     <main className="layout">
@@ -61,7 +60,7 @@ console.log("parks: ", parks);
       <section className="tripplan">
         <PageSwProvider>
           <TripPlan
-            // tripplan={adventureArr}
+            activity_types={activity_types}
 
           />
         </PageSwProvider>
