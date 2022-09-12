@@ -7,51 +7,12 @@ export default function useApplicationData() {
   const [state, setState] = useState({
     users: "",
     activities: "",
-    cities: ""
+    cities: "",
   });
-
-  // const [users, setUsers] = useState();
-  // const [activities, setActivities] = useState();
-  // const [cities, setCities] = useState();
 
   //To update the day state and retainning the state for days and appointments and
   //to create new objects to be called to update the state with new day
-  // const setDay = day => setState({ ...state, day });
-
-  // use effect to axios request data from API
-  // and receive response from API
-  // useEffect(() => {
-  //   Promise.all([
-  //     axios.get("/api/users"),
-  //     axios.get("/api/activities"),
-  //     axios.get("/api/cities/whistler")
-  //   ])
-  //   .then(all => {
-  //     setUsers(prev => ({
-  //       ...prev,
-  //       users: all[0].data
-  //     }));
-  //     setActivities(prev => ({
-  //       ...prev,
-  //       activities: all[1].data
-  //     }));
-  //     setCities(prev => ({
-  //       ...prev,
-  //       cities: all[2].data
-  //     }));
-  //   });
-  // }, []);
-
-
-  // useEffect(() => {
-  //   axios.get("/api/activities")
-  //   .then(response => {
-  //     setActivities(prev => ({
-  //       ...prev,
-  //       activities: response[1].data
-  //     }));
-  //   });
-  // }, []);
+  // const setActivityType = activity => setState({ ...state, activityType });
 
   useEffect(() => {
 
@@ -70,6 +31,8 @@ export default function useApplicationData() {
 
     });
   }, []);
+
+
 
 
   //keep track of correct and updated number of interview spots available
@@ -155,5 +118,5 @@ export default function useApplicationData() {
           //  activities,
           //  cities
         state
-         };
+      };
 }

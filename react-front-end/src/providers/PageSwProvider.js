@@ -1,13 +1,11 @@
 import { createContext, useState } from 'react';
 
-
 export const pageSwContext = createContext();
-
 
 //the function for the page switching provider
 export default function PageSwProvider(initial) {
   //initialization of states of modes and the mode stack, the history
-  const [page, setPage] = useState();
+  const [page, setPage] = useState(initial);
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);
 

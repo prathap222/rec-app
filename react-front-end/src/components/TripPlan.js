@@ -25,8 +25,21 @@ export default function TripPlan(props){
     <article className="tripplan" data-testid="tripplan">
       {!auth && <IniForm />}
       {auth && <Info
-        activity_type={props.activity_type}
+            adventures={props.adventures}
+            valueAdv={props.valueAdv}
+            onChangeAdv={props.onChangeAdv}
 
+            movies={props.movies}
+            valueM={props.valueM}
+            onChangeM={props.onChangeM}
+
+            restaurants={props.restaurants}
+            valueR={props.valueR}
+            onChangeR={props.onChangeR}
+
+            parks={props.parks}
+            valueP={props.valueP}
+            onChangeP={props.onChangeP}
       />}
 
 

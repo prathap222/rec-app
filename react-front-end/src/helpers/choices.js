@@ -1,4 +1,4 @@
-function getAdventure(array) {
+function getAdventures(array) {
   return array.filter( e => {
       return e.activity_type === 'adventure';
     });
@@ -23,7 +23,7 @@ function getRestaurants(array) {
 }
 
 module.exports = {
-  getAdventure,
+  getAdventures,
   getMovies,
   getParks,
   getRestaurants
