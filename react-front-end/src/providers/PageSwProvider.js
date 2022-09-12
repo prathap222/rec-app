@@ -5,7 +5,6 @@ export const pageSwContext = createContext();
 //the function for the page switching provider
 export default function PageSwProvider(initial) {
   //initialization of states of modes and the mode stack, the history
-  const [page, setPage] = useState(initial);
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);
 
@@ -24,8 +23,8 @@ export default function PageSwProvider(initial) {
   // }
 
   //the function for mode transition forward
-  const transition = function(page) {
-    setPage(page);
+  const transition = function(mode) {
+    setMode(mode);
   };
 
   //the function for mode transition backward among modes
@@ -39,11 +38,11 @@ export default function PageSwProvider(initial) {
     }
   }
 
-  const pageSwData = { page, mode, transition, back };
+  const pageSwData = { mode, transition, back };
 
   //returning the object of the state management
   return (
-    <pageSwContext.Provider value="pageSwData">
+    <pageSwContext.Provider value={pageSwData}>
       {initial.children}
     </pageSwContext.Provider>
   );

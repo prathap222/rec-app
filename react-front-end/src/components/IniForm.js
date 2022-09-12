@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { authContext } from '../providers/AuthProvider';
 
-export default function IniForm() {
+export default function IniForm(props) {
   const [email, setEmail] = useState("");
   const [tripTitle, setTripTitle] = useState("");
   const [city, setCity] = useState("Vancouver");
@@ -12,7 +12,7 @@ export default function IniForm() {
 
   const onSubmit = function(event) {
     event.preventDefault();
-    email && login(email, tripTitle, city, budge, day);
+    email && props.onSubmit({ email, tripTitle, city, budge, day });
   };
 
 

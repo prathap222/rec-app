@@ -7,9 +7,9 @@ export default function AuthProvider(props) {
   const [user, setUser] = useState(null);
 
   // Perform login process for the user & save authID, etc
-  const login = function(email, tripTitle, city, budge, day) {
+  const login = function(newUser) {
     setAuth(true);
-    setUser({ email, tripTitle, city, budge, day });
+    setUser(newUser);
   };
 
   const logout = function() {
@@ -18,7 +18,7 @@ export default function AuthProvider(props) {
   };
 
   // authContext will expose these items
-  const userData = { auth, user, login, logout };
+  const userData = { user, login, logout };
 
   // We can use this component to wrap any content we want to share this context
   return (

@@ -73,14 +73,6 @@ function App() {
   // console.log("restaurants: ", restaurant.restaurants);
   // console.log("parks: ", park.parks);
 
-  // const setAdv = adventure => setAdventure({ adventure });
-  // const setMov = movie => setMovie({ movie });
-  // const setRes = restaurant => setRestaurant({ restaurant });
-  // const setPar = park => setPark({ park });
-
-
-
-
   return (
     <main className="layout">
 

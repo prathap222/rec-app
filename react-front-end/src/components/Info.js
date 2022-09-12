@@ -3,30 +3,45 @@ import { authContext } from '../providers/AuthProvider';
 import { pageSwContext } from '../providers/PageSwProvider';
 import AdventureList from './AdventureList';
 import Adventure from './Adventure';
+import Button from './Button';
 import "../styles/info.css";
+
+const AVDVEN = "AVDVEN";
+const MOVIE = "MOVIE";
+const RESTA = "MOVIE";
+const PARK = "PARK";
+
+const INIT = "INIT";
+const CREATE = "CREATE";
+const EDIT = "EDIT";
+const SHOW = "SHOW";
+const SAVING = "SAVING";
+const DELETING = "DELETING";
+
 
 export default function Info(props) {
   const { user, logout } = useContext(authContext);
-  // const { transition } = useContext(pageSwContext);
+  const { mode, transition } = useContext(pageSwContext);
   // const [isShown, setIsShown] = useState(false);
 
-  // const handleClick = event => {
-  //   transition(<AdventureList/>);
-  // };
 
-  // Show user Info
+  const handleClick = mode => {
+    transition(mode);
+  };
+
+  // Show user Info; () => {}
   return (
     <div className='info'>
       <header className='top_buttons'>
-        <button onClick={() => {}}>
+        <Button onClick={handleClick}>
 Adventures
          {/* {setIsShown && <AdventureList/>} */}
 
-        </button>
+        </Button>
 
-        <button onClick={() => {}}>Movies</button>
-        <button onClick={() => {}}>Restaurants</button>
-        <button onClick={() => {}}>Parks</button>
+        <Button onClick={handleClick}>Movies</Button>
+        <Button onClick={handleClick}>Restaurants</Button>
+        <Button onClick={handleClick}>Parks</Button>
 
       </header>
 
@@ -57,49 +72,6 @@ Adventures
 
 
 
-
-
-      <div className='panel-movies'>
-        {/* <div className="UserInfo">
-          <p>Your Trip:: {user.tripTitle}</p>
-          <p>Your city: {user.city}</p>
-          <p>Your budge: {user.budge}</p>
-          <p>Number of your Day(s): {user.day}</p>
-          <p>Your Email: {user.email}</p>
-          <div>try: {props.try}</div>
-        </div > */}
-        <p>
-          <button type="button" onClick={logout}>Logout</button>
-        </p>
-      </div>
-
-      <div className='panel-restaurants'>
-        {/* <div className="UserInfo">
-          <p>Your Trip:: {user.tripTitle}</p>
-          <p>Your city: {user.city}</p>
-          <p>Your budge: {user.budge}</p>
-          <p>Number of your Day(s): {user.day}</p>
-          <p>Your Email: {user.email}</p>
-          <div>try: {props.try}</div>
-        </div > */}
-        <p>
-          <button type="button" onClick={logout}>Logout</button>
-        </p>
-      </div>
-
-      <div className='panel-parks'>
-        {/* <div className="UserInfo">
-          <p>Your Trip:: {user.tripTitle}</p>
-          <p>Your city: {user.city}</p>
-          <p>Your budge: {user.budge}</p>
-          <p>Number of your Day(s): {user.day}</p>
-          <p>Your Email: {user.email}</p>
-          <div>try: {props.try}</div>
-        </div > */}
-        <p>
-          <button type="button" onClick={logout}>Logout</button>
-        </p>
-      </div>
 
     </div>
 
