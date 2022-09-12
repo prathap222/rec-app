@@ -1,7 +1,7 @@
 @import "./mixins.scss";
 @import "./variables.scss";
 
-.day-list {
+.activity-list {
   &__item {
     @include fade;
 
@@ -27,8 +27,8 @@
       }
     }
 
-    &--full {
-      opacity: $inactive-opacity;
-    }
+    // &--full {
+    //   opacity: $inactive-opacity;
+    // }
   }
 }
