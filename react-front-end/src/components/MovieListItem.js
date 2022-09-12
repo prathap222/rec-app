@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/ActivityListItem.scss";
 import classNames from "classnames";
 
-export default function AdventureListItems(props) {
+export default function MovieListItems(props) {
   const dayClass = classNames("adven-list__item", {
     " adven-list__item--selected": props.selected,
     // " activity-list__item--full": props.spots === 0
