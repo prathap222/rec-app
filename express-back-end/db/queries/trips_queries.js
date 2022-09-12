@@ -18,7 +18,7 @@ module.exports = (db) => {
 
     getTripById: (tripId) => {
       const qs = `
-      SELECT trip_id, schedule_id, schedule_name, activity_id, name, price_cents, time_operation, lat, long, activities.image_url, itineraries.id as itinerary_id
+      SELECT trip_id, schedule_id, schedule_name, activity_id, name, price_cents, operation_time, latitude, longitude, activities.image_url, itineraries.id as itinerary_id
       FROM trips
       JOIN users ON user_id = users.id
       JOIN schedules ON trips.id = trip_id
@@ -33,13 +33,14 @@ module.exports = (db) => {
 
     postTrips: (tripSummary) => {
 
-      const trip_id = Object.keys(tripSummary)[0];
-      const frontEndInput = tripSummary[trip_id];
-      const user_id = frontEndInput.userId
-      const trip_name = frontEndInput.trip;
-      const trip_total = frontEndInput.total;
-      const trip_columns = frontEndInput.columns;
-      const trip_budget = frontEndInput.budget;
+      console.log(`tripSummary: ${JSON.stringify(tripSummary)}`)
+
+      const trip_id = tripSummary.trip_id
+      const user_id = tripSummary.userId
+      const trip_name = tripSummary.trip;
+      const trip_total = tripSummary.total;
+      const trip_columns = tripSummary.columns;
+      const trip_budget = tripSummary.budget;
 
       console.log("userid: ", user_id)
       console.log("trip_id: ", trip_id);
@@ -70,7 +71,6 @@ module.exports = (db) => {
       }
 
       let qs = query_for_editing+ query_for_trips + query_for_schedules + query_for_itineraries;
-      console.log(qs)
 
       return db.query(qs)
     },
@@ -80,10 +80,6 @@ module.exports = (db) => {
       const qs = "DELETE FROM trips WHERE trips.id = $1"
       return db.query(qs,[tripId])
     }
-
-
-
-
 
    }
 }

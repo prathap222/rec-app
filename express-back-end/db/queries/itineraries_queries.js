@@ -2,7 +2,7 @@ module.exports = (db) => {
   return {
     getItineraryId: (itineraryId) => {
       const qs = `
-      SELECT user_id, trip_id, itineraries.id as itinerary_id, destinations.city, destinations.country, destinations.image_url, schedule_name as day, users.first_name, users.last_name, activities.name, activities.price_cents, activities.time_operation
+      SELECT user_id, trip_id, itineraries.id as itinerary_id, destinations.city, destinations.country, destinations.image_url, schedule_name as day, users.first_name, users.last_name, activities.name, activities.price_cents, activities.operation_time
       FROM trips
       JOIN users ON user_id = users.id
       JOIN schedules ON trips.id = trip_id
