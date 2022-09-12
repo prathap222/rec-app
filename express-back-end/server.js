@@ -33,7 +33,7 @@ app.use(express.static('public'));
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require('./routes/users');
 const tripRoutes = require('./routes/trips');
-const itineraryRoutes = require("./routes/itineraries")
+const itineraryRoutes = require("./routes/itineraries");
 const apiRoutes = require('./routes/api');
 
 //All Queries Factories
@@ -41,7 +41,7 @@ const usersQueriesFactory = require("./db/queries/users_queries");
 const userServicesFactory = require("./lib/services/user_services");
 const tripsQueriesFactory = require("./db/queries/trips_queries");
 const tripsServicesFactory = require("./lib/services/trips_services");
-const itineraryQueriesFactory = require ('./db/queries/itineraries_queries')
+const itineraryQueriesFactory = require ('./db/queries/itineraries_queries');
 const itineraryServicesFactory = require('./lib/services/itineraries_services');
 const cityQueriesFactory = require('./db/queries/cities_queries');
 const cityServicesFactory = require('./lib/services/cities_services');
@@ -84,9 +84,9 @@ app.get('/', (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  res.clearCookie('user')
-  res.end()
-})
+  res.clearCookie('user');
+  res.end();
+});
 
 app.listen(PORT, () => {
   console.log(`Rec app listening on port ${PORT}`);
