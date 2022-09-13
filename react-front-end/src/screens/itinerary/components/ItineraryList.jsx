@@ -25,7 +25,7 @@ const ItineraryList = props => {
               key={activity.id}
               name={activity.name}
               price={activity.price_cents}
-              time={activity.time_operations}
+              time={activity.operations_time}
               activityImage={activity.image_url}
             />
           );
