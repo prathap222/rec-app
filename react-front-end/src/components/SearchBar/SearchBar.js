@@ -40,8 +40,6 @@ export default function SearchBar (props) {
               getCities(event.target.value, setCities);
             }}
           placeholder='e.g Vancouver'
-
-
         />
 
       </form>
