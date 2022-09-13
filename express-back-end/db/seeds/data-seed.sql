@@ -62,7 +62,7 @@ INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, d
 ('The Mexican Corner Restaurant', 4000, '12AM-6PM', 50.116322, -122.957359, 2,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/restaurants/the-mexican-corner-restaurant.jpg?raw=true'),
 
 --victoria
-('City Tour', 2500, '8:30AM-4PM', 48.421102, -123.371383, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/city-tour.jpg?raw=true'),
+('City Tour', 2500, '8:30AM-4PM', 48.421102, -123.371383, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/city-tour.jpg?raw=true'),
 ('Paragliding', 2000, '8AM-6PM', 48.406306, -123.352454, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/paragliding.jpg?raw=true'),
 ('Whale watching', 2000, '7AM-9PM', 48.366378, -123.730183, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/whale-watching.jpg?raw=true'),
 ('Sea Plane Tour', 2000, '8AM-6PM', 48.426594, -123.370921, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/sea-plane-tours.jpg?raw=true'),
