@@ -11,13 +11,13 @@ INSERT INTO destinations(city, country, image_url) VALUES
 
 INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, destination_id, activity_type, image_url) VALUES
 --vancouver
-('Aquarium', 2500, '9:30AM-5:30PM', 49.300488, -123.130877, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/aquarium.jpg?raw=true'),
+('Aquarium', 2500, '9AM-5PM', 49.300488, -123.130877, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/aquarium.jpg?raw=true'),
 ('Sky Diving', 2000, '10AM-6PM', 49.291982, -123.134283, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/kayak.jpg?raw=true'),
 ('Guided Kayaking', 2000, '7AM-7PM', 49.272456, -123.104794, 1,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/scuba-diving.png?raw=true'),
 ('Scuba Diving', 2500, '7AM-5PM',  49.268513, -123.167276, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/sky-diving.jpg?raw=true'),
 
-('Cineplex Odeon', 2500, '9:25AM-5:30PM', 49.280504, -123.106872, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/cineplex-odeon.jpg?raw=true'),
-('Scotiabank Theatre', 2000, '9:30AM-5:30PM', 49.281998, -123.124344, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/scotiabank-theatre.jpg?raw=true'),
+('Cineplex Odeon', 2500, '9AM-5PM', 49.280504, -123.106872, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/cineplex-odeon.jpg?raw=true'),
+('Scotiabank Theatre', 2000, '9AM-5PM', 49.281998, -123.124344, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/scotiabank-theatre.jpg?raw=true'),
 
 ('Capilano Suspension Bridge Park', 1500, '9AM-5PM',  32.738750, -117.165817, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/capilano-suspension-bridge.jpg?raw=true'),
 ('Queen Elizabeth Park', 1500, '9AM-10PM',  49.243599, -123.117867, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/queen-elizabeth.png?raw=true'),
@@ -25,8 +25,8 @@ INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, d
 
 ('Chambar Restaurant', 3000, '5PM-10PM',  49.2801271, -123.1099351, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/chambar.jpg?raw=true'),
 ('España Restaurant', 3500, '4PM-10PM',  49.288055,  -123.140411, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/espana.jpg?raw=true'),
-('Hawksworth Restaurant', 3000, '11.30AM-10PM',  49.2834532,  -123.1192387, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/hawksworth.jpg?raw=true'),
-('Miku Restaurant', 3500, '11.30AM-10PM',  49.28741, -123.11296, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/miku.jpeg?raw=true'),
+('Hawksworth Restaurant', 3000, '11AM-10PM',  49.2834532,  -123.1192387, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/hawksworth.jpg?raw=true'),
+('Miku Restaurant', 3500, '11AM-10PM',  49.28741, -123.11296, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/miku.jpeg?raw=true'),
 
 --vancouver island
 ('Whale Watching', 1500, '8AM-5PM', 49.167491, -125.935499, 3,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver-island/adventures/whale-watching.jpg?raw=true'),
@@ -46,7 +46,7 @@ INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, d
 ('Trollers Fish & Chips', 3500, '12AM-9PM', 49.167254, -123.934642, 3,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver-island/restaurants/trollers-fish-chips.jpg?raw=true'),
 
 --whistler
-('Peak 2 Peak Gondola', 2500, '8:30AM-3PM', 50.069348, -122.946083, 2,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/adventures/peak-to-peak.jpg?raw=true'),
+('Peak 2 Peak Gondola', 2500, '10AM-3PM', 50.069348, -122.946083, 2,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/adventures/peak-to-peak.jpg?raw=true'),
 ('Snow Boarding', 3000, '8AM-8PM', 50.096651, -122.987532, 2,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/adventures/snow-boarding.jpg?raw=true'),
 ('Snow Mobiling', 5000, '9AM-6PM', 50.116592, -122.948121, 2,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/adventures/snow-mobiling.jpg?raw=true'),
 ('Ziplineing', 3000, '8AM-6PM',  50.113499, -122.954551, 2,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/adventures/zipline.jpg?raw=true'),
@@ -62,22 +62,22 @@ INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, d
 ('The Mexican Corner Restaurant', 4000, '12AM-6PM', 50.116322, -122.957359, 2,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/whistler/restaurants/the-mexican-corner-restaurant.jpg?raw=true'),
 
 --victoria
-('City Tour', 2500, '8:30AM-4PM', 48.421102, -123.371383, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/city-tour.jpg?raw=true'),
+('City Tour', 2500, '9AM-4PM', 48.421102, -123.371383, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/city-tour.jpg?raw=true'),
 ('Paragliding', 2000, '8AM-6PM', 48.406306, -123.352454, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/paragliding.jpg?raw=true'),
 ('Whale watching', 2000, '7AM-9PM', 48.366378, -123.730183, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/whale-watching.jpg?raw=true'),
 ('Sea Plane Tour', 2000, '8AM-6PM', 48.426594, -123.370921, 4,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/adventures/sea-plane-tours.jpg?raw=true'),
 
-('Beacon Hill', 2500, '8:30AM-4PM', 48.412683, -123.362753, 4,'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/parks/beacon-hill.jpg?raw=true'),
-('Clover Point Park', 2500, '8:30AM-4PM', 48.40784, -123.35646, 4,'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/parks/clover-point-parkvictoria.jpg?raw=true'),
-('Fishermans Wharf Park', 2500, '8:30AM-4PM', 48.421899, -123.383015, 4,'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/parks/fishermans-wharf-park.jpg?raw=true'),
+('Beacon Hill', 2500, '9AM-4PM', 48.412683, -123.362753, 4,'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/parks/beacon-hill.jpg?raw=true'),
+('Clover Point Park', 2500, '9AM-4PM', 48.40784, -123.35646, 4,'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/parks/clover-point-parkvictoria.jpg?raw=true'),
+('Fishermans Wharf Park', 2500, '9AM-4PM', 48.421899, -123.383015, 4,'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/parks/fishermans-wharf-park.jpg?raw=true'),
 
-('Capitol 6 Theatres', 2500, '8:30AM-4PM', 48.42545015, -123.3617811, 4,'movies','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/movies/capitol-6-theatres.jpg?raw=true'),
-('IMAX', 2500, '8:30AM-4PM', 48.407326, -123.329773, 4,'movies','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/movies/imax.jpg?raw=true'),
-('SilverCity Victoria Cinemas', 2500, '8:30AM-4PM', 48.4550825, -123.3982321, 4,'movies','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/movies/silvercity-victoria.jpg?raw=true'),
+('Capitol 6 Theatres', 2500, '9AM-4PM', 48.42545015, -123.3617811, 4,'movies','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/movies/capitol-6-theatres.jpg?raw=true'),
+('IMAX', 2500, '9AM-4PM', 48.407326, -123.329773, 4,'movies','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/movies/imax.jpg?raw=true'),
+('SilverCity Victoria Cinemas', 2500, '9AM-4PM', 48.4550825, -123.3982321, 4,'movies','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/movies/silvercity-victoria.jpg?raw=true'),
 
-('II Terrazzo', 2500, '8:30AM-4PM', 48.42738, -123.36879, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/Il-terrazzo.png?raw=true'),
-('Johns Place Restaurant', 2500, '8:30AM-4PM', 48.4278417,-123.3637292, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/johns-place-restaurant.png?raw=true'),
-('Pagliaccis', 2500, '8:30AM-4PM', 48.4244429, -123.3664177, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/pagliaccis-restaurant.jpg?raw=true');
+('II Terrazzo', 2500, '9AM-4PM', 48.42738, -123.36879, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/Il-terrazzo.png?raw=true'),
+('Johns Place Restaurant', 2500, '9AM-4PM', 48.4278417,-123.3637292, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/johns-place-restaurant.png?raw=true'),
+('Pagliaccis', 2500, '9AM-4PM', 48.4244429, -123.3664177, 4,'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/victoria/restaurants/pagliaccis-restaurant.jpg?raw=true');
 
 -- testdata to be deleted
 INSERT INTO trips (id, user_id, trip_name, total_cost, trip_budget) VALUES ('fe657dd5-07eb-48a7-9c3c-7381d3fef028', 1, 'test-vanc', 300, 500);
