@@ -7,9 +7,12 @@ export default function deleteTrip(trip, trips, setTrips) {
 
   let newState = copy.filter(trip => trip.id !== tripId);
 
-  setTrips(newState);
+  const header = { headers: {'Content-Type': 'application/x-www-form-urlencoded'} }
+  const userInput = new URLSearchParams();
+  userInput.append('tripId', tripId)
 
-  axios.post(`/trips/delete`, {
-    tripId
-  });
+  axios.post('/trips/delete', userInput, header)
+  .then((res) => {
+    setTrips(newState);
+  })
 }
