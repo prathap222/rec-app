@@ -6,20 +6,20 @@ export default function AdventureList(props) {
 
 console.log("props.adventures: ", props.adventures)
 
-  // let advenListItemArr = props.adventures.map((adven) => {
-  //   return (
-  //     <AdventureListItems
-  //       key={adven.id}
-  //       name={adven.name}
-  //       selected={adven.name === props.valueAdv}
-  //       setAdven={props.onChange}
-  //     />
-  //   );
-  // });
+  let advenListItemArr = props.adventures.map((adven) => {
+    return (
+      <AdventureListItems
+        key={adven.id}
+        name={adven.name}
+        selected={adven.name === props.valueAdv}
+        setAdven={props.onChangeAdv}
+      />
+    );
+  });
 
   return (
     <ul>
-      {/* {advenListItemArr} */}
+      {advenListItemArr}
     </ul>
 
   );
