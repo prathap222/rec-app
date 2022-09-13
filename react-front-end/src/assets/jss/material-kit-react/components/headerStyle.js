@@ -1,3 +1,5 @@
+
+
 import {
   container,
   defaultFont,
@@ -11,12 +13,11 @@ import {
   boxShadow,
   drawerWidth
 } from "../../material-kit-react.js";
-// assets/jss/material-kit-react.js
+
 const headerStyle = {
   appBar: {
     display: "flex",
     border: "0",
-    // borderRadius: "3px",
     padding: "0.625rem 0",
     marginBottom: "0",
     color: "#555",
@@ -54,7 +55,8 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "18px",
+    fontSize: "22px",
+    fontFamily: "Montserrat",
     borderRadius: "3px",
     textTransform: "none",
     color: "inherit",

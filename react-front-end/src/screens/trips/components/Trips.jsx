@@ -15,7 +15,8 @@ import CardBody from "../../../components/Card/CardBody";
 // core components
 import styles from "../../../assets/jss/material-kit-react/views/tripItineraryPage";
 import TripList from "./TripList";
-import image from "../../../assets/img/chambar-restaurant.jpg";
+import image from "../../../assets/img/whistler-wallpapers.jpg";
+
 
 //helpers
 import getTrips from "../helpers/getTrips";

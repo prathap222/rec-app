@@ -3,7 +3,6 @@ import React from "react";
  import { Link, useNavigate } from "react-router-dom"
 
 import classNames from "classnames";
-import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -50,9 +49,13 @@ export default function Header(props) {
   return(
 
     <AppBar className={`nav-header ${appBarClasses}`}>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Maze&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+      </style>
       <div className= {classes.flex}>
-        <Button className={classes.title} component= { Link } to="/">
-        <WanderLust />WANDERLUST </Button>
+        <Button className={classes.title} component= { Link } to="/"
+            style={{color: "#FFA07A", fontSize:"26px", fontFamily:"Rubik Maze"}}>
+        <WanderLust style={{width:"35px", height:"35px"}} />WANDERLUST </Button>
       </div>
         {(user)?
         <div>
