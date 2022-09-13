@@ -11,9 +11,9 @@ import Button from "@material-ui/core/Button";
 import axios from 'axios';
 
 // @material-ui/icons
-import WanderLust from '@material-ui/icons/ExploreOutlined';
-import Profile from '@material-ui/icons/PersonPinCircleOutlined';
-import Logout from '@material-ui/icons/ExitToAppOutlined';
+// import WanderLust from '@material-ui/icons/ExploreOutlined';
+// import Profile from '@material-ui/icons/PersonPinCircleOutlined';
+// import Logout from '@material-ui/icons/ExitToAppOutlined';
 
 import saveToLocal from "../../screens/main/helpers/saveToLocal";
 

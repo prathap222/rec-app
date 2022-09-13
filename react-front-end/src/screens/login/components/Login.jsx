@@ -6,8 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
 // @material-ui/icons
-import EmailIcon from '@material-ui/icons/MailOutlineRounded';
-import PasswordIcon from '@material-ui/icons/VpnKeyRounded';
+// import EmailIcon from '@material-ui/icons/MailOutlineRounded';
+// import PasswordIcon from '@material-ui/icons/VpnKeyRounded';
 
 
 // core components
