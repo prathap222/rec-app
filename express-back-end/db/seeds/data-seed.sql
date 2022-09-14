@@ -11,10 +11,10 @@ INSERT INTO destinations(city, country, image_url) VALUES
 
 INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, destination_id, activity_type, image_url) VALUES
 --vancouver
-('Aquarium', 2500, '9AM-5PM', 49.300488, -123.130877, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/aquarium.jpg?raw=true'),
-('Sky Diving', 2000, '10AM-6PM', 49.291982, -123.134283, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/kayak.jpg?raw=true'),
-('Guided Kayaking', 2000, '7AM-7PM', 49.272456, -123.104794, 1,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/scuba-diving.png?raw=true'),
-('Scuba Diving', 2500, '7AM-5PM',  49.268513, -123.167276, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/sky-diving.jpg?raw=true'),
+('Aquarium', 2500, '9AM-5PM', 49.300488, -123.130877, 1, 'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/aquarium.jpg?raw=true'),
+('Sky Diving', 2000, '10AM-6PM', 49.291982, -123.134283, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/sky-diving.jpg?raw=true'),
+('Guided Kayaking', 2000, '7AM-7PM', 49.272456, -123.104794, 1,'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/kayak.jpg?raw=true'),
+('Scuba Diving', 2500, '7AM-5PM',  49.268513, -123.167276, 1, 'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/scuba-diving.png?raw=true'),
 
 ('Cineplex Odeon', 2500, '9AM-5PM', 49.280504, -123.106872, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/cineplex-odeon.jpg?raw=true'),
 ('Scotiabank Theatre', 2000, '9AM-5PM', 49.281998, -123.124344, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/scotiabank-theatre.jpg?raw=true'),
