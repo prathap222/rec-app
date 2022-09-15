@@ -50,11 +50,13 @@ export default function Header(props) {
 
     <AppBar className={`nav-header ${appBarClasses}`}>
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Maze&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+        {/* @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Maze&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap'); */}
+        {/* @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Glitch&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap'); */}
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Distressed&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
       </style>
       <div className= {classes.flex}>
         <Button className={classes.title} component= { Link } to="/"
-            style={{color: "#FFA07A", fontSize:"26px", fontFamily:"Rubik Maze"}}>
+            style={{color: "#FFA07A", fontSize:"30px", fontFamily:"Rubik Distressed"}}>
         <WanderLust style={{width:"35px", height:"35px"}} />WANDERLUST </Button>
       </div>
         {(user)?

@@ -26,8 +26,9 @@ export default function Card(props) {
   return (
     <div className={cardClasses} {...rest}>
 
-      {!children && <img src="https://media3.giphy.com/media/3oEduVuDlWIe751xPW/giphy.gif" />}
-      {children && children}
+      {/* {!children && <img src="https://media3.giphy.com/media/3oEduVuDlWIe751xPW/giphy.gif" />}
+      {children && children} */}
+      {children}
     </div>
   );
 }

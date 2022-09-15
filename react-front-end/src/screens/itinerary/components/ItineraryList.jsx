@@ -15,7 +15,7 @@ const ItineraryList = props => {
           <strong>Price</strong>
         </span>
         <span>
-          <strong>Time of Operation</strong>
+          <strong>Operation Hours</strong>
         </span>
       </div>
       <div>

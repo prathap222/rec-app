@@ -29,7 +29,7 @@ const Form = props => {
     >
       <label htmlFor="budget-input">
         {" "}
-        {!addOrSubtract && !props.budget ? "Enter Budget" : "Adjust Budget"}
+        {!addOrSubtract && !props.budget ? "Budget?" : "Change Budget?"}
       </label>
 
       <input
@@ -44,9 +44,8 @@ const Form = props => {
       />
       {!addOrSubtract && !props.budget ? (
         <Button
-          style={{ width: "5vw" }}
+          style={{ width: "5vw", background:"#E2F516" }}
           variant="contained"
-          color="primary"
           type="submit"
           onClick={() => {
             if (isNaN(inputValue)) return;
@@ -60,9 +59,8 @@ const Form = props => {
       ) : (
         <div className="plus-minus">
           <Button
-            style={{ width: "1vw" }}
+            style={{ width: "1vw", background:"#00FF00" }}
             variant="contained"
-            color="primary"
             type="submit"
             onClick={() => {
               addOrSubtract = "add";
@@ -71,8 +69,8 @@ const Form = props => {
             +
           </Button>
           <Button
+            style={{ background:"#C34A2C" }}
             variant="contained"
-            color="primary"
             type="submit"
             onClick={() => {
               addOrSubtract = "subtract";

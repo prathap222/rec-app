@@ -11,22 +11,22 @@ INSERT INTO destinations(city, country, image_url) VALUES
 
 INSERT INTO activities(name, price_cents, operation_time, latitude, longitude, destination_id, activity_type, image_url) VALUES
 --vancouver
-('Aquarium', 2500, '9AM-5PM', 49.300488, -123.130877, 1, 'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/aquarium.jpg?raw=true'),
-('Sky Diving', 2000, '10AM-6PM', 49.291982, -123.134283, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/sky-diving.jpg?raw=true'),
-('Guided Kayaking', 2000, '7AM-7PM', 49.272456, -123.104794, 1,'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/kayak.jpg?raw=true'),
-('Scuba Diving', 2500, '7AM-5PM',  49.268513, -123.167276, 1, 'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/scuba-diving.png?raw=true'),
+('Aquarium', 4200, '10AM-5PM', 49.300488, -123.130877, 1, 'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/aquarium.jpg?raw=true'),
+('Sky Diving', 36900, '10AM-6PM', 49.291982, -123.134283, 1, 'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/sky-diving.jpg?raw=true'),
+('Guided Kayaking', 2500, '9AM-8PM', 49.272456, -123.104794, 1,'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/kayak.jpg?raw=true'),
+('Scuba Diving', 27500, '10AM-6PM',  49.268513, -123.167276, 1, 'adventure','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/adventures/scuba-diving.png?raw=true'),
 
-('Cineplex Odeon', 2500, '9AM-5PM', 49.280504, -123.106872, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/cineplex-odeon.jpg?raw=true'),
-('Scotiabank Theatre', 2000, '9AM-5PM', 49.281998, -123.124344, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/scotiabank-theatre.jpg?raw=true'),
+('Cineplex Odeon', 2000, '12AM-10PM', 49.280504, -123.106872, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/cineplex-odeon.jpg?raw=true'),
+('Scotiabank Theatre', 1500, '12AM-10PM', 49.281998, -123.124344, 1, 'movies', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/movies/scotiabank-theatre.jpg?raw=true'),
 
-('Capilano Suspension Bridge Park', 1500, '9AM-5PM',  32.738750, -117.165817, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/capilano-suspension-bridge.jpg?raw=true'),
-('Queen Elizabeth Park', 1500, '9AM-10PM',  49.243599, -123.117867, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/queen-elizabeth.png?raw=true'),
-('Stanley Park', 1500, '9AM-5PM',  49.299999, -123.139999, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/stanley-park%20.jpg?raw=true'),
+('Capilano Suspension Bridge Park', 5500, '9AM-6PM',  32.738750, -117.165817, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/capilano-suspension-bridge.jpg?raw=true'),
+('Queen Elizabeth Park', 1500, '6AM-10PM',  49.243599, -123.117867, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/queen-elizabeth.png?raw=true'),
+('Stanley Park', 1500, '6AM-10PM',  49.299999, -123.139999, 1, 'parks','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/parks/stanley-park%20.jpg?raw=true'),
 
-('Chambar Restaurant', 3000, '5PM-10PM',  49.2801271, -123.1099351, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/chambar.jpg?raw=true'),
-('España Restaurant', 3500, '4PM-10PM',  49.288055,  -123.140411, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/espana.jpg?raw=true'),
-('Hawksworth Restaurant', 3000, '11AM-10PM',  49.2834532,  -123.1192387, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/hawksworth.jpg?raw=true'),
-('Miku Restaurant', 3500, '11AM-10PM',  49.28741, -123.11296, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/miku.jpeg?raw=true'),
+('Chambar Restaurant', 6500, '5PM-10PM',  49.2801271, -123.1099351, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/chambar.jpg?raw=true'),
+('España Restaurant', 5500, '4PM-10PM',  49.288055,  -123.140411, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/espana.jpg?raw=true'),
+('Hawksworth Restaurant', 4000, '11AM-10PM',  49.2834532,  -123.1192387, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/hawksworth.jpg?raw=true'),
+('Miku Restaurant', 5500, '11AM-10PM',  49.28741, -123.11296, 1, 'restaurant','https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver/restaurants/miku.jpeg?raw=true'),
 
 --vancouver island
 ('Whale Watching', 1500, '8AM-5PM', 49.167491, -125.935499, 3,'adventure', 'https://github.com/prathap222/rec-app/blob/master/react-front-end/public/images/vancouver-island/adventures/whale-watching.jpg?raw=true'),

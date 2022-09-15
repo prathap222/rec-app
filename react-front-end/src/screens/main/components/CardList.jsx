@@ -43,7 +43,8 @@ const CardList = props => {
             props.column.items.length === 0
             // ? <img src="https://media3.giphy.com/media/3oEduVuDlWIe751xPW/giphy.gif" width="100%"/>
             // ? <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/5e833c23132493.5631dc1e8ba98.gif" width="100%" height="100%" />
-            ? <img src="https://static.wixstatic.com/media/c6ba6c_95d07d0346754bf1b602bb7ffb9072bb~mv2.gif" width="100%" height="100%" />
+            // ? <img src="https://static.wixstatic.com/media/c6ba6c_95d07d0346754bf1b602bb7ffb9072bb~mv2.gif" width="100%" height="100%" />
+            ? <img src="https://i.pinimg.com/originals/f7/0b/18/f70b1806d7128b4843d81a5a62bb3b07.gif"/>
             : props.column.items.map((item, index) => {
               return (
                 <Card

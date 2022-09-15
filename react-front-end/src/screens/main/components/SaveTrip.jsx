@@ -27,20 +27,21 @@ const SaveTrip = props => {
 
   const modalStlye = {
     height: "14vh",
-    width: "25vw",
+    width: "20vw",
     margin: "20px",
-    marginBottom: "0px"
+    marginBottom: "0px",
+    color: "#872657"
   };
 
   const textFieldStyle = {
-    margin: "0 20px"
+    margin: "0 20px",
   };
 
   return (
     <div className="save-trip">
       <Button
+        style={{ background:"#E2F516"}}
         variant="contained"
-        color="primary"
         onClick={() => handleClickOpen(setOpen)}
       >
         Save Trip
@@ -79,6 +80,7 @@ const SaveTrip = props => {
         </DialogContent>
         <DialogActions>
           <Button
+            style={{ color:"#872657", fontSize:"18px"}}
             onClick={() => {
               if (!tripName) {
                 alert("Trip name is required!");
@@ -102,7 +104,6 @@ const SaveTrip = props => {
                   alert("Saving was unsuccessful");
                 });
             }}
-            color="primary"
           >
             Save Trip
           </Button>

@@ -22,7 +22,7 @@
 .grid-headlines > span {
   display: flex;
   width: auto;
-  font-size: 21px;
+  font-size: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -35,10 +35,10 @@
 }
 
 .activities-container {
-  height: 350px;
+  height: 450px;
   overflow: auto;
 }
 
 #image {
-  border: 1px solid black;
+  padding: 15px;
 }

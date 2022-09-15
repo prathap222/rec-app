@@ -3,6 +3,8 @@ import Form from "./Form";
 import SaveTrip from "./SaveTrip";
 import saveToLocal from "../helpers/saveToLocal";
 import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import Login from '@material-ui/icons/ExitToAppOutlined';
 
 const FormSection = props => {
   return (
@@ -38,13 +40,16 @@ const FormSection = props => {
 
         </div>
       ) : (
-        <Link onClick={() => {
+        <Button style={{color:"white", fontSize:"20px"}}>
+          <Login /> <Link onClick={() => {
           if(props.columns) {
             saveToLocal(props.columns, props.budget)
           }
         }}to="/login">
           Login to Save
         </Link>
+        </Button>
+
       )}
     </div>
   );

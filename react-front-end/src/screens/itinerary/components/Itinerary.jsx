@@ -86,12 +86,14 @@ const Itinerary = (props) => {
           backgroundPosition: "top center"
         }}
       >
-        <div className={classes.container} style={{ width: "800px" }}>
+        <div className={classes.container} style={{ width: "1200px" }}>
           <GridContainer>
             <GridItem>
-              <Card className={classes[cardAnimaton]}>
-                <CardHeader color="info" className={classes.cardHeader}>
-                  <h4>Your Itinerary</h4>
+              <Card className={classes[cardAnimaton]} >
+                <CardHeader color="info"
+                  className={classes.cardHeader}
+                  style={{background:"linear-gradient(to right bottom, #7F525D, #C4AEAD)", color: "black"}}>
+                  <h2>Your Itinerary</h2>
                 </CardHeader>
                 <CardBody>
                   <div className="destination">
@@ -112,7 +114,7 @@ const Itinerary = (props) => {
                   </div>
                 </CardBody>
                 <CardFooter className={classes.cardFooter}>
-                  <Total total={total} />
+                  <strong><h3 style={{color:"#7D0552"}}> <Total total={total} /> </h3> </strong>
                 </CardFooter>
               </Card>
             </GridItem>
