@@ -42,28 +42,43 @@ User can modify the trip plan and even delete the trip plan on the small pop-up 
 ## Project Views
 ### Opening page
 
-!["Home page"](https://github.com/prathap222/rec-app/blob/master/docs/docs/home-page.png)
+!["Home page"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/homepage.gif)
 
 
 
 ### Main page
 
-!["Main page"](https://github.com/prathap222/rec-app/blob/master/docs/docs/main-page.png)
+!["Main page"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/mainpage.gif)
 
 
 ### Budget-adjustment
 
-!["Budget-adjustment"](https://github.com/prathap222/rec-app/blob/master/docs/docs/budget-adjustment.png)
+!["Budget-adjustment"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/budget-adjustment.gif)
 
 
 ### Map
 
-!["Map"](https://github.com/prathap222/rec-app/blob/master/docs/docs/map.png)
+!["Map"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/map.gif)
 
 
 ### Save-trip
 
-!["Save-trip"](https://github.com/prathap222/rec-app/blob/master/docs/docs/save-trip.png)
+!["Save-trip"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/save-trip.gif)
+
+
+### View-trip
+
+!["View-trip"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/view-trip%20(1).gif)
+
+
+### Edit-trip
+
+!["Edit-trip"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/edit-trip.gif)
+
+
+### Delete-trip
+
+!["Delete-trip"](https://github.com/prathap222/wanderlust/blob/master/docs/docs/gif/delete-trip.gif)
 
 
 ## Tech Stacks
